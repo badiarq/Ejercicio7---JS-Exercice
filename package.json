@@ -1,0 +1,20 @@
+{
+  "name": "ejercicio7---js-exercice",
+  "version": "1.0.1",
+  "description": "IFCJS Course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/badiarq/Ejercicio7---JS-Exercice.git"
+  },
+  "keywords": [],
+  "author": "Badr OUAHBI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/badiarq/Ejercicio7---JS-Exercice/issues"
+  },
+  "homepage": "https://github.com/badiarq/Ejercicio7---JS-Exercice#readme"
+}

@@ -18,7 +18,7 @@ function ProjetShortcut(id)
     }
     else {
         alert('\nThere is no model for this project yet.\nPlease make a selection between Project nº1 and Project nº5.');
-        window.open('./Viewer.html', '_self');
+        window.open('./viewer.html', '_self');
     }
 
     document.getElementById('iframeId').src = projectLinkUrl;
