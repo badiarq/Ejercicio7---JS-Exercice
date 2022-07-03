@@ -39,7 +39,11 @@ body {
     overflow: hidden;
 }
 
-.projectCard img{
+.projectCard a {
+    display: block;
+}
+
+.projectCard img {
     z-index: 1;
     height: var(--coverHeight);
     width: 100%;
@@ -47,10 +51,13 @@ body {
     object-fit: cover;
 }
 
-.projectCard:hover .imageCard{
+.projectCard .imageCard {
+    transition: all .5s ease-out;
+}
+
+.projectCard:hover .imageCard {
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
-    transition: all 1s ease-out;
     cursor: pointer;
     border-radius: var(--coverRadius);
 }
@@ -59,14 +66,46 @@ body {
     cursor: pointer;
 }
 
-.projectCard .cardTitle {
+.projectCard .cardBody {
+    padding: 1.5rem 2rem;
     z-index: 10;
     position: absolute;
     bottom: 0;
-    padding-left: var(--coverPadding);
-    padding-bottom: 0.5rem;
+    width: 100%;
+    transition: all .5s ease-in-out;
+    transform: translateY(40px);
+}
+
+.projectCard:hover .cardBody {
+    animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+} 
+
+.projectCard .cardTitle {
     color: rgb(240, 240, 240);
 }   
+
+.projectCard .projectDes {
+    font-size: 0.813rem;
+    line-height: 1.5em;
+    color: #fff;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+}   
+
+.projectCard:hover .projectDes {
+    opacity: 1;
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(-18px);
+        transform: translateY(-18px);
+    }
+}
 
 .projectCard .shadow {
     z-index: 5;
