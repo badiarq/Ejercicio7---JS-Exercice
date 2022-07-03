@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
-    <title>Ejercicio3 - BIM Platform</title>
+    <title>BIM Platform</title>
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -41,111 +41,19 @@
     <section class="cardsGrid">
         <div class="container">
             <div class="row">
-
                 <!-- Card -->
-                <div class=" cardContainer col-12 col-md-6 col-lg-4 col-xxl-3 py-3">
+
+                <div id="projectsContainer" class="cards col-12 col-md-6 col-lg-4 col-xxl-3 py-3">
                     <div class="projectCard">
-                        <a class="projectButton" id="PB1" onclick="saveId(this.id)">
+                        <a class="projectButton" href="./viewer.html" id="project-id">
                             <div class="shadow"></div>
                             <img class="imageCard" src="./img/building1.jpeg" alt="building1" />
-                            <div class="cardTitle">
-                                <h3>Project 1</h3>
+                            <div class="cardTitle ProjectTitle">
+                                <h3>project-name</h3>
                             </div>
                         </a>
                     </div>
                 </div>
-    
-                <!-- Card -->
-                <div class=" cardContainer col-12 col-md-6 col-lg-4 col-xxl-3 py-3">
-                    <div class="projectCard">
-                        <a class="projectButton" id="PB2" onclick="saveId(this.id)">
-                            <div class="shadow"></div>
-                            <img class="imageCard" src="./img/building2.jpeg" alt="building2" />
-                            <div class="cardTitle">
-                                <h3>Project 2</h3>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-    
-                <!-- Card -->
-                <div class=" cardContainer col-12 col-md-6 col-lg-4 col-xxl-3 py-3">
-                    <div class="projectCard">
-                        <a class="projectButton" id="PB3" onclick="saveId(this.id)">
-                            <img class="imageCard" src="./img/building3.jpeg" alt="building3" />
-                            <div class="shadow"></div>
-                            <div class="cardTitle">
-                                <h3>Project 3</h3>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-    
-                <!-- Card -->
-                <div class=" cardContainer col-12 col-md-6 col-lg-4 col-xxl-3 py-3">
-                    <div class="projectCard">
-                        <a class="projectButton" id="PB4" onclick="saveId(this.id)">
-                            <div class="shadow"></div>
-                            <img class="imageCard" src="./img/building4.jpeg" alt="building4" />
-                            <div class="cardTitle">
-                                <h3>Project 4</h3>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Card -->
-                <div class=" cardContainer col-12 col-md-6 col-lg-4 col-xxl-3 py-3">
-                    <div class="projectCard">
-                        <a class="projectButton" id="PB5" onclick="saveId(this.id)">
-                            <div class="shadow"></div>
-                            <img class="imageCard" src="./img/building5.jpeg" alt="building5" />
-                            <div class="cardTitle">
-                                <h3>Project 5</h3>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-    
-                <!-- Card -->
-                <div class=" cardContainer col-12 col-md-6 col-lg-4 col-xxl-3 py-3">
-                    <div class="projectCard">
-                        <a class="projectButton" id="PB6" onclick="saveId(this.id)">
-                            <div class="shadow"></div>
-                            <img class="imageCard" src="./img/building6.jpeg" alt="building6" />
-                            <div class="cardTitle">
-                                <h3>Project 6</h3>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-    
-                <!-- Card -->
-                <div class=" cardContainer col-12 col-md-6 col-lg-4 col-xxl-3 py-3">
-                    <div class="projectCard">
-                        <a class="projectButton" id="PB7" onclick="saveId(this.id)">
-                            <div class="shadow"></div>
-                            <img class="imageCard" src="./img/building7.jpeg" alt="building7" />
-                            <div class="cardTitle">
-                                <h3>Project 7</h3>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-    
-                <!-- Card -->
-                <div class=" cardContainer col-12 col-md-6 col-lg-4 col-xxl-3 py-3">
-                    <div class="projectCard">
-                        <a class="projectButton" id="PB8" onclick="saveId(this.id)">
-                            <div class="shadow"></div>
-                            <img class="imageCard" src="./img/building8.jpeg" alt="building8" />
-                            <div class="cardTitle">
-                                <h3>Project 8</h3>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
 
             </div>
         </div>
@@ -163,6 +71,6 @@
         </div>
     </footer>
 
-    <script src="./index.js"></script>
+    <script type="module" src="./index.js"></script>
 </body>
 </html>

@@ -1,31 +1,39 @@
-let projectLinkUrl = "";
-let clicked_id;
+import { projectsCards } from "./projects.js";
 
-function saveId(id)
-{
-    clicked_id = id;
-    window.open('./viewer.html', '_self');
+const projectsContainer = document.getElementById("projectsContainer");
+const projectsContainerChildren = projectsContainer.children;
+const projectsContainerChildrenArray = Array.from(projectsContainerChildren);
 
-    if (id == 'PB1'){
-        projectLinkUrl = 'https://ifcjs.github.io/ifcjs-crash-course/sample-apps/01/';
-    }
-    else if (id == 'PB2'){
-        projectLinkUrl = 'https://ifcjs.github.io/ifcjs-crash-course/sample-apps/02/';
-    }
-    else if (id == 'PB3'){
-        projectLinkUrl = 'https://ifcjs.github.io/ifcjs-crash-course/sample-apps/03/';
-    }
-    else if (id == 'PB4'){
-        projectLinkUrl = 'https://ifcjs.github.io/ifcjs-crash-course/sample-apps/04/';
-    }
-    else if (id == 'PB5'){
-        projectLinkUrl = 'https://ifcjs.github.io/ifcjs-crash-course/sample-apps/05/';
-    }
-    else {
-        alert('\nThere is no model for this project yet.\nPlease make a selection between Project nº1 and Project nº5.');
-        window.open('./index.html', '_self');
-    }
+// Get the template card
+const templateProjectCard = projectsContainerChildrenArray[0];
 
-    var selectedProject = projectLinkUrl;
-    sessionStorage.setItem("selectedProject", projectLinkUrl);
+const baseURL = './viewer.html';
+
+// Copy the project Card and paste it n times
+for (let project of projectsCards) {
+    // Create a new card
+    const newCard = templateProjectCard.cloneNode(true);
+
+    // Add project name to the card
+    const cardTitle = newCard.querySelector('.ProjectTitle');
+    cardTitle.textContent = project.name;
+
+    const cardButton = newCard.querySelector('.projectButton');
+
+    //Send value from page to another using URL Parameters
+    let destinationURL = baseURL + `?id=${project.id}&projectURL=${project.url}`;
+
+    // Replace the html href
+    cardButton.href = destinationURL;
+
+    // Replace the html project-id
+    const cardButtonChildren = cardButton.children;
+    const projectImage = newCard.querySelector('.imageCard');
+    projectImage.src = `./img/${project.id}.jpeg`;
+    
+    // Add the cards to the DOM (HTML)
+    projectsContainer.appendChild(newCard);
 }
+
+// Remove the template card
+templateProjectCard.remove();
