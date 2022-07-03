@@ -84,7 +84,7 @@ body {
     color: rgb(240, 240, 240);
 }   
 
-.projectCard .projectDes {
+.projectCard .projectDescription {
     font-size: 0.813rem;
     line-height: 1.5em;
     color: #fff;
@@ -92,7 +92,7 @@ body {
     transition: all .2s ease-in-out;
 }   
 
-.projectCard:hover .projectDes {
+.projectCard:hover .projectDescription {
     opacity: 1;
 }
 
@@ -136,7 +136,7 @@ body {
     margin-bottom: var(--coverMargin);
 }
 
-.viewerSection .bimViewer iframe {
+.viewerSection .bimViewer {
     width: 100vw;
     height: 70vh;
     overflow: hidden;
